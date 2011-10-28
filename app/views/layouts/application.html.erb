@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AppForum</title>
+  <title>AppForum | <%= @title %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+ <%= stylesheet_link_tag 'custom', :media => 'screen' %>
 </head>
-<body>
+<body >
+ <div class="container">
+   <%= render 'layouts/header' %>
 
-<%= yield %>
-
+      <section class="round">
+       
+        <%= yield %>
+      </section>
+ <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>

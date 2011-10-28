@@ -1,4 +1,11 @@
 AppForum::Application.routes.draw do
+ 
+
+   match '/signup',  :to => 'users#new'
+
+   match '/about',   :to => 'pages#about'
+
+  root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
