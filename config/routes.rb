@@ -1,10 +1,14 @@
 AppForum::Application.routes.draw do
+  #get "sessions/new"
+
  resources :users
+ resources :sessions, :only => [:new, :create, :destroy]
+
 
    match '/signup',  :to => 'users#new'
-
+    match '/signout', :to => 'sessions#destroy'
    match '/about',   :to => 'pages#about'
-
+   match '/signin',  :to => 'sessions#new'
   root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
