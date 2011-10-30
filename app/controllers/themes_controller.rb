@@ -4,7 +4,7 @@ class ThemesController < ApplicationController
   def create
   @title = "New theme"
   @theme  = current_user.themes.build(params[:theme])
-  current_theme=@theme
+  
     if @theme.save
       flash[:success] = "Theme created!"
       redirect_to root_path

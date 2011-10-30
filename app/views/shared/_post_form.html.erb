@@ -1,5 +1,5 @@
-<%= form_for @post do |f| %>
-  <%= render 'shared/error_message', :object => f.object %>
+<%= form_for ([@theme, @post]), :html => {:multipart => true} do |f| %>
+  <%= render 'shared/error_message', :object => @post %>
   <div class="field">
     <%= f.text_area :content %>
   </div>

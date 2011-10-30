@@ -1,5 +1,5 @@
 .container {
-  width: 710px;
+  width: 900px;
   margin: 0 auto;
 }
 body {
@@ -7,6 +7,12 @@ body {
 }
 header {
   padding-top: 20px;
+ 
+}
+header img {
+  padding: 0em;
+  background: #fff;
+ 
 }
 section {
   margin-top: 1em;
@@ -113,6 +119,10 @@ td.main {
   width: 70%;
   padding: 1em;
 }
+td.feed {
+  width: 100%;
+  padding: 1em;
+}
 
 td.sidebar {
   width: 30%;
@@ -141,7 +151,7 @@ field_with_errors {
 
 #error_explanation {
   width: 400px;
-  border: 2px solid red;
+  border: 2px solid #B70808;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
@@ -165,7 +175,7 @@ field_with_errors {
 }
 
 #error_explanation ul li {
-  font-size: 12px;
+  font-size: 15px;
   list-style: square;
 }
 ul.users {
@@ -219,7 +229,7 @@ div.user_info a {
 }
 
 div.user_info span.user_name {
-  position: absolute;
+ 
 }
 
 div.user_info span.themes {
