@@ -5,10 +5,17 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+        <% unless @user.themes.empty? %>
+        <table class="themes" summary="User themes">
+          <%= render @themes %>
+        </table>
+        <%= will_paginate @themes %>
+      <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
-    </td>
+      <strong>Themes</strong> <%= @user.themes.count %> 
+   </td>
   </tr>
 </table>

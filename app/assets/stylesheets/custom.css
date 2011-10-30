@@ -175,3 +175,63 @@ ul.users {
 .users li {
   list-style: none;
 }
+
+
+
+
+
+h1.theme {
+  margin-bottom: 0.3em;
+}
+
+table.themes {
+  margin-top: 1em;
+}
+
+table.themes tr {
+  height: 70px;
+}
+
+table.themes tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.themes tr td.theme {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.themes tr td.theme span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.themes {
+  font-size: 80%;
+}
+
+form.new_theme {
+  margin-bottom: 2em;
+}
+
+form.new_theme textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+

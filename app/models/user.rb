@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
  attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
    email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+   has_many :themes, :dependent => :destroy
+
+
   validates :name, :presence => true,
                    :length   => { :maximum => 50 }
   validates :email, :presence => true,
@@ -27,6 +31,10 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
   end
+	def feed #themes of curent user
+	  themes
+	end
+
  private
 
     def encrypt_password

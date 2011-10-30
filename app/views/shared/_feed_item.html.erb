@@ -1,0 +1,14 @@
+<tr>
+  
+  <td class="theme">
+   
+    <span class="content"><%=link_to feed_item.content, feed_item %></span>
+    <span class="timestamp">
+     Theme posted <%= time_ago_in_words(feed_item.created_at) %> ago by
+    <span class="user">
+      <%= link_to feed_item.user.name, feed_item.user %>
+    </span> 
+    </span>
+  </td>
+  
+</tr>

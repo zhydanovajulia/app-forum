@@ -1,0 +1,21 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <p>Theme name  </p>     
+       <h1>
+        <%= @theme.content %>
+       </h1>
+
+        <h1 class="theme">Want create new post?</h1>
+        <%= render 'shared/post_form' %>
+
+        <% unless @posts.empty? %>
+        <table class="themes" summary="User posts">
+        <%= render @posts %>
+        </table>
+        <%= will_paginate @posts %>
+      <% end %>
+    </td>
+    
+  </tr>
+</table>

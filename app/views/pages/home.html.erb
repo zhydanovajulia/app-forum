@@ -1,7 +1,20 @@
 <h1>AppForum</h1>
 
-<p>
- 
-</p>
-
+<% if !signed_in? %>
 <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+
+<%else %>
+<table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="theme">Want create new theme?</h1>
+        <%= render 'shared/theme_form' %>
+       
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+<%= render 'shared/feed' %>

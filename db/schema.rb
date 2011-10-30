@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111028230113) do
+ActiveRecord::Schema.define(:version => 20111029165223) do
+
+  create_table "posts", :force => true do |t|
+    t.string   "content"
+    t.integer  "theme_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["created_at"], :name => "index_posts_on_created_at"
+  add_index "posts", ["theme_id"], :name => "index_posts_on_theme_id"
+
+  create_table "themes", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "themes", ["created_at"], :name => "index_themes_on_created_at"
+  add_index "themes", ["user_id"], :name => "index_themes_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
