@@ -19,6 +19,7 @@ class ThemesController < ApplicationController
     @posts = @theme.posts.paginate(:page => params[:page])
     @post = Post.new
     @title = @theme.content
+   
    end
 
 

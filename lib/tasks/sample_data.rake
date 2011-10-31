@@ -22,11 +22,16 @@ namespace :db do
     end
 
      User.all.each do |user|
-          user.themes.all.each do |theme|
-            theme.posts.create!(:content=> Faker::Lorem.sentence(5))
-          end
+        10.times do
+            user.posts.create!(:content=> Faker::Lorem.sentence(5))
+        end
      end 
-
+    Theme.all.each do |theme|
+      10.times do
+          theme.posts.create
+      end
+    end 
+    
   end
 end
 

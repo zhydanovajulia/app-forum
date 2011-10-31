@@ -2,7 +2,10 @@
   <td class="theme">
     <span class="content"><%=post.content %></span>
     <span class="timestamp">
-     Posted <%= time_ago_in_words(post.created_at) %> ago 
+     Posted <%= time_ago_in_words(post.created_at) %> ago by
+    <span class="user">
+      <%= link_to post.user_id %>
+    </span> 
     </span>
   </td>
   

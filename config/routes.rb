@@ -2,11 +2,14 @@ AppForum::Application.routes.draw do
   #get "sessions/new"
 
  resources :users
+ 
+
  resources :sessions, :only => [:new, :create, :destroy]
  resources :themes do
     resources :posts
  end
 
+ 
 
    match '/signup',  :to => 'users#new'
     match '/signout', :to => 'sessions#destroy'
