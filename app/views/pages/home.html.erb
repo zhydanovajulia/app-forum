@@ -4,20 +4,27 @@
 
 <%else %>
 <table class="profile" summary="For signed-in users">
-    <tr>
-      <td class="main">
-        <h1 class="theme">Want create new theme?</h1>
+   
+ <tr>
+     <td class="main" >
+      <h1 class="theme">Want create new theme?</h1>
         <%= render 'shared/theme_form' %>
-         
       </td>
-      <td class="sidebar round">
-        <%= render 'shared/user_info' %>
+
+        <td class="sidebar round" rowspan="2" >
+        
+           <%= render 'shared/user_info' %>
       </td>
-    </tr>
+ </tr>
+
   <tr>
-  <td class="feed" colspan="2">
-    <%= render 'shared/feed' %>
-  </td>
+         <td class="feed">
+             <%= render 'shared/feed' %>
+         </td>
+    
+         
+   
+  
   </tr>
   
   </table>

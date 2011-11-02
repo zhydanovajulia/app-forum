@@ -8,6 +8,7 @@ def create
   
    @post =current_user.posts.build(params[:post])
    @post.theme_id = params[:theme_id]
+  
 
     if @post.save
       flash[:success] = "Post created!"

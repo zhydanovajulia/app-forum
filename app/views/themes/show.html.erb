@@ -1,14 +1,11 @@
 <table class="profile" summary="Profile information">
-  <tr>
-  <td class="feed" colspan="2">
-  <p>Theme name  </p>     
+
+  <td class="feed" >
+   <p>Theme name  </p>     
          <h1>    <%= @theme.content %> </h1>
-         
+     <% unless @posts.empty? %>
 
-
-        <% unless @posts.empty? %>
-
-        <table class="themes" summary="User posts">
+        <table class="posts" summary="User posts"  cellspacing="10">
 
         <%= render @posts %>
 
@@ -22,8 +19,8 @@
      </td>
   </tr>
  <tr>
-    
-   <td class="main">
+  
+   <td class="main" >
          
         <h2 class="theme">Want create new post?</h2>
         <%= render 'shared/post_form' %>

@@ -1,14 +1,18 @@
 <tr>
-  
-  <td class="theme">
-   
-    <span class="content"><%=link_to feed_item.content, feed_item %></span>
-    <span class="timestamp">
-     Theme posted <%= time_ago_in_words(feed_item.created_at) %> ago by
-    <span class="user">
+  <td class="gravatar round">
+   <p>
       <%= link_to feed_item.user.name, feed_item.user %>
-    </span> 
-    </span>
+   </p>
+  </td>
+  <td class="theme round">
+     <span><%=link_to feed_item.content, feed_item %></span>
   </td>
   
+</tr>
+<tr class="timestamp">
+  <td colspan="2">
+    <span class="timestamp">
+     Theme posted <%= time_ago_in_words(feed_item.created_at) %> ago 
+    </span>
+  </td>
 </tr>

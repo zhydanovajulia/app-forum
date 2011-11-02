@@ -1,5 +1,5 @@
 .container {
-  width: 900px;
+  width: 90%;
   margin: 0 auto;
 }
 body {
@@ -116,23 +116,23 @@ table.profile {
 }
 
 td.main {
-  width: 70%;
-  padding: 1em;
+  width: 80%;
+  
 }
 td.feed {
-  width: 100%;
+  width: 80%;
   padding: 1em;
 }
 
 td.sidebar {
-  width: 30%;
+  width: 20%;
   padding: 1em;
   vertical-align: top;
   background: #ffc;
 }
 
 .profile img.gravatar {
-  border: 1px solid #999;
+ 
   margin-bottom: -15px;
 }
 div.field, div.actions {
@@ -194,31 +194,110 @@ h1.theme {
   margin-bottom: 0.3em;
 }
 
+table.posts {
+  margin-top: 1em;
+  width: 100%;
+}
 table.themes {
   margin-top: 1em;
+  width: 100%;
 }
 
+table.posts tr {
+  height: 80px;
+  
+}
 table.themes tr {
-  height: 70px;
+  height: 50px;
+  
+}
+table.posts tr.timestamp {
+   height: 20px;
+   background: #F0F2FF;
+   padding-left: 5px;
+}
+table.themes tr.timestamp {
+   height: 20px;
+   background: #F0F2FF;
+   padding-left: 5px;
+}
+table.posts tr.timestamp td{
+   background: #F0F2FF;
+   padding-left: 10px;
+}
+table.themes tr.timestamp td{
+   background: #F0F2FF;
+   padding-left: 5px;
+  
+}
+table.posts tr.theme {
+  height: 30px;
+  background: #B9C0FF ;
+  
 }
 
-table.themes tr td.gravatar {
-  border-top: 1px solid #ccc;
+table.posts tr.theme td{
+  height: 30px;
+  background: #B9C0FF ;
+  padding-left: 10px;
+}
+
+
+table.posts tr td.gravatar {
+  background: #D9DCF9;
   vertical-align: top;
   width: 50px;
+  padding: 10px;
 }
-
-table.themes tr td.theme {
-  border-top: 1px solid #ccc;
+table.themes tr td.gravatar {
+  background: #D9DCF9;
   vertical-align: top;
-  padding-top: 10px;
+  width: 50px;
+  padding: 5px;
+  font-size: 15px;
 }
 
-table.themes tr td.theme span.timestamp {
+table.posts tr td.post {
+  border: 1px solid #ccc;
+  vertical-align: center;
+  padding: 10px;
+ 
+}
+
+table.posts tr td.theme {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding: 10px;
+ 
+}
+table.themes tr td.theme {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding: 10px;
+ 
+}
+table.themes tr  {
+  border: 1px solid #ccc;
+  vertical-align: top;
+  padding: 10px;
+ 
+}
+
+table.posts tr td span.timestamp {
   display: block;
-  font-size: 85%;
+  vertical-align: bottom;
+  font-size: 13px;
   color: #666;
 }
+table.themes tr td span.timestamp {
+  display: block;
+  vertical-align: bottom;
+  font-size: 13px;
+  color: #666;
+}
+
+
+
 
 div.user_info img {
   padding-right: 0.1em;

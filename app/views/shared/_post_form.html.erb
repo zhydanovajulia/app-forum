@@ -1,7 +1,10 @@
-<%= form_for ([@theme, @post]), :html => {:multipart => true} do |f| %>
+<%= form_for ([@theme, @post]),:html => {:multipart => true}, :url => theme_posts_path(@theme) do |f| %>
   <%= render 'shared/error_message', :object => @post %>
   <div class="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :rows=>10%>
+  <p>
+    <%= f.file_field :picture %>
+  </p>
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>

@@ -1,12 +1,34 @@
+<tr class="theme">
+ <td colspan="2" >
+  <%= @theme.content %>
+ </td>
+</tr>
+
 <tr>
-  <td class="theme">
-    <span class="content"><%=post.content %></span>
-    <span class="timestamp">
-     Posted <%= time_ago_in_words(post.created_at) %> ago by
-    <span class="user">
-      <%= link_to post.user_id %>
-    </span> 
-    </span>
+  <td class="gravatar round">
+    <%= gravatar_for current_user, :size => 40 %>
+    <p>
+      <%= link_to User.find_by_id(post.user_id).name %>
+   </p>
   </td>
+  <td class="post round">
+		<span><%=post.content %>   </span>
+	    <p>
+			<% if post.picture.exists? then %>   
+			 <%= image_tag post.picture.url(:medium) %>
+			<% end %>
+	 
+	    </p>
+    
+  </td>
+
+ 
   
+</tr>
+<tr class="timestamp">
+  <td colspan="2" class="round">
+         <span class="timestamp">
+           Posted <%= time_ago_in_words(post.created_at) %> ago 
+         </span>
+  </td>
 </tr>
